@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="sfX-1e-RtU">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEV-rJ-zWw">
+                                <rect key="frame" x="75" y="127" width="240" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="6PP-59-uS7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="HxG-oH-oDd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Kul-Jm-lfH"/>
+                                    <constraint firstAttribute="height" constant="66" id="ZVD-NP-YTB"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="GO ALL IN">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="Avenir-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-b6-k5A">
+                                <rect key="frame" x="75" y="203" width="240" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Lfp-UM-PkL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="Odk-Qo-PZS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="nFI-su-c5Y"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="tBX-Fy-INp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-kv-M2S">
+                                <rect key="frame" x="135" y="47" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="KxS-Jx-llD"/>
+                                    <constraint firstAttribute="height" constant="40" id="MT5-33-u8j"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="OHj-LJ-jWy"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="eDL-dd-1oj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="hQo-Go-Yhi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm0-e5-eAw">
+                                <rect key="frame" x="75" y="326" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1rs-le-6jV"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZOE-Gr-Mj8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOz-yU-jAi">
+                                <rect key="frame" x="75" y="729" width="240" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rm0-e5-eAw" firstAttribute="top" secondItem="gqa-b6-k5A" secondAttribute="bottom" constant="90" id="PkQ-tW-Plb"/>
+                            <constraint firstItem="mCF-kv-M2S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VAQ-Zw-EaA"/>
+                            <constraint firstItem="gqa-b6-k5A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X5v-7W-Mpn"/>
+                            <constraint firstItem="rm0-e5-eAw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="atb-ip-YWJ"/>
+                            <constraint firstItem="gqa-b6-k5A" firstAttribute="top" secondItem="IEV-rJ-zWw" secondAttribute="bottom" constant="10" id="dXm-I8-XjK"/>
+                            <constraint firstItem="IEV-rJ-zWw" firstAttribute="top" secondItem="mCF-kv-M2S" secondAttribute="bottom" constant="40" id="m7L-Yc-MIK"/>
+                            <constraint firstAttribute="bottom" secondItem="sfX-1e-RtU" secondAttribute="bottom" id="o22-Ui-iBw"/>
+                            <constraint firstItem="sfX-1e-RtU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tsh-1w-SJF"/>
+                            <constraint firstItem="IEV-rJ-zWw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tzr-xH-uui"/>
+                            <constraint firstItem="mCF-kv-M2S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v5D-As-qR5"/>
+                            <constraint firstItem="sfX-1e-RtU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wfk-B3-Im2"/>
+                            <constraint firstItem="sfX-1e-RtU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zE2-fE-jo3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="129" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="swooshLogo" width="119" height="20"/>
+        <image name="welcomeScreenBG" width="414" height="736"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
