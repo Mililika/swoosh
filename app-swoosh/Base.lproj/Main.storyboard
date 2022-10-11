@@ -153,6 +153,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mensButtonPressed:" destination="gCe-qe-NAG" eventType="touchUpInside" id="H5x-0o-rzT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUw-D1-sbd" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="354" height="60"/>
@@ -163,6 +166,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="womensButtonPressed:" destination="gCe-qe-NAG" eventType="touchUpInside" id="c8U-sS-lv8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRf-E1-XJP" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="180" width="354" height="60"/>
@@ -173,6 +179,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="coedButtonPressed:" destination="gCe-qe-NAG" eventType="touchUpInside" id="ma0-Rv-hjo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -191,6 +200,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="gCe-qe-NAG" eventType="touchUpInside" id="VCa-y4-Iwk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-tr-5HN">
                                 <rect key="frame" x="35" y="68" width="30" height="25"/>
@@ -227,6 +239,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lcp-qJ-9NH"/>
+                    <connections>
+                        <outlet property="nextBtn" destination="qzs-CW-VkC" id="R8Y-Q5-K8S"/>
+                        <segue destination="cBA-kr-TsT" kind="show" identifier="skillVCSegue" id="AW4-bl-sKp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="un2-38-8mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="BeQ-Qz-E8s" userLabel="Exit" sceneMemberID="exit"/>
@@ -238,18 +254,18 @@
             <objects>
                 <viewController id="cBA-kr-TsT" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZk-6r-WBp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="8Pz-T9-7SU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="sB0-Yh-feM">
                                 <rect key="frame" x="147" y="48" width="120" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Su9-X8-R7e">
-                                <rect key="frame" x="20" y="418" width="374" height="60"/>
+                                <rect key="frame" x="20" y="389" width="374" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNz-k6-Q3y" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="174.5" height="60"/>
@@ -277,7 +293,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQv-zP-xzR" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="30" y="799" width="354" height="43"/>
+                                <rect key="frame" x="30" y="775" width="354" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -287,7 +303,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-X1-q4s">
-                                <rect key="frame" x="157" y="298" width="100" height="40"/>
+                                <rect key="frame" x="157" y="269" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GGe-DK-HcJ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="r0B-fx-iTJ"/>
@@ -315,6 +331,7 @@
                             <constraint firstItem="Su9-X8-R7e" firstAttribute="top" secondItem="Lmv-X1-q4s" secondAttribute="bottom" constant="80" id="o2I-eO-bbt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WtL-d9-Bpj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQ4-ae-ehI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
